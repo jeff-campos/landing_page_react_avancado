@@ -35,9 +35,28 @@ export type SectionTechProps = {
   }[]
 }
 
+export type SectionConceptsProps = {
+  title: string
+  concepts: {
+    title: string
+    id: string
+  }[]
+}
+
+export type SectionModulesProps = {
+  title: string
+  modules: {
+    id: string
+    title: string
+    subtitle: string
+    description: string
+  }[]
+}
 export type LandingPageProps = {
   logo: LogoProps
   header: HeaderProps
   sectionAboutProject: SectionAboutProjectProps
   sectionTech: SectionTechProps
+  sectionConcepts: SectionConceptsProps
+  sectionModules: SectionModulesProps
 }
