@@ -108,6 +108,31 @@ const GET_LANDING_PAGE = /* GraphQL */ `
     }
   }
 
+  fragment sectionReview on LandingPage {
+    sectionReviews {
+      title
+      reviewsComponent {
+        id
+        name
+        description
+        image {
+          url
+        }
+      }
+    }
+  }
+
+  fragment sectionFaq on LandingPage {
+    sectionFaq {
+      title
+      questions {
+        question
+        answer
+        id
+      }
+    }
+  }
+
   query GET_LANDING_PAGE {
     landingPage {
       ...logo
@@ -119,6 +144,8 @@ const GET_LANDING_PAGE = /* GraphQL */ `
       ...sectionAgenda
       ...pricingBox
       ...sectionAboutUs
+      ...sectionReview
+      ...sectionFaq
     }
   }
 `
